@@ -10,6 +10,8 @@
  */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import 'font-awesome-sprockets';
+@import 'font-awesome';
 
 :root {
   --bg-gradient-start: #faf7f5;
@@ -20,8 +22,8 @@
 }
 
 body.dark-theme {
-  --bg-gradient-start: #101318;
-  --bg-gradient-end: #1c1f29;
+  --bg-gradient-start: #1a1a1a;
+  --bg-gradient-end: #161617;
   --text-color: #e3e1d6;
   --app-bar-bg: linear-gradient(90deg, #a36508 0%, #853c00 50%, #892b00 100%);
   --app-bar-shadow: rgba(0, 0, 0, 0.5);

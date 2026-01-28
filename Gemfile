@@ -40,6 +40,8 @@ gem "image_processing", "~> 1.2"
 
 #for using icons
 gem "font-awesome-sass"
+gem "dartsass-rails"
+gem "bootstrap","~> 5.3.2"
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record
