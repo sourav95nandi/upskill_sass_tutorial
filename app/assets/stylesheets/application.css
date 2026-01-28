@@ -12,19 +12,23 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 :root {
-  --bg-gradient-start: #f5f7fa;
-  --bg-gradient-end: #e8eef5;
+  --bg-gradient-start: #faf7f5;
+  --bg-gradient-end: #f5f1e8;
   --text-color: #2d3748;
   --app-bar-bg: linear-gradient(90deg, #f19d1d 0%, #e88e44 50%, #c43f01 100%);
   --app-bar-shadow: rgba(139, 76, 46, 0.4);
 }
 
 body.dark-theme {
-  --bg-gradient-start: #101418;
-  --bg-gradient-end: #1c2229;
-  --text-color: #e0e0e0;
-  --app-bar-bg: linear-gradient(90deg, #8f5d11 0%, #8a5428 50%, #752600 100%);
+  --bg-gradient-start: #101318;
+  --bg-gradient-end: #1c1f29;
+  --text-color: #e3e1d6;
+  --app-bar-bg: linear-gradient(90deg, #a36508 0%, #853c00 50%, #892b00 100%);
   --app-bar-shadow: rgba(0, 0, 0, 0.5);
+}
+
+html {
+  overflow-x: hidden;
 }
 
 body {
@@ -34,6 +38,7 @@ body {
   background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
   color: var(--text-color);
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -47,7 +52,8 @@ main {
 }
 
 .navbar {
-  margin: 2px 2px 2px;
+  margin: 5px;
+  padding: 10px;
   border-radius: 10px;
   background: var(--app-bar-bg);
   box-shadow: 0 4px 20px var(--app-bar-shadow);
@@ -56,4 +62,9 @@ main {
 .home-callout {
   background: var(--app-bar-bg);
   border-radius: 20px;
+  padding:50px 10px 50px;
+}
+
+.home-callout h1{
+  font-size: 4rem;
 }
