@@ -21,6 +21,7 @@
   --app-bar-bg: linear-gradient(90deg, #f19d1d 0%, #e88e44 50%, #c43f01 100%);
   --app-grad-bg: radial-gradient(circle,  #f19d1d 53%, #e88e44 70%, #c43f01 100%);
   --app-bar-shadow: rgba(139, 76, 46, 0.4);
+  --app-button-bg: #f19d1d;
 }
 
 body.dark-theme {
@@ -31,6 +32,7 @@ body.dark-theme {
   --app-bar-bg: linear-gradient(90deg, #a36508 0%, #853c00 50%, #892b00 100%);
   --app-grad-bg: radial-gradient(circle, #a36508 53%, #853c00 70%, #892b00 100%);
   --app-bar-shadow: rgba(0, 0, 0, 0.5);
+  --app-button-bg: #a36508;
 }
 
 html {
@@ -81,4 +83,15 @@ main {
   border-radius: 15px;
   padding: 10px 10px 100px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-submit{
+  background: var(--app-button-bg);
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+.form-submit:hover {
+  background: var(--app-grad-bg);
+  color: #fff;
 }
