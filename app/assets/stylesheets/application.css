@@ -93,5 +93,5 @@ main {
 
 .form-submit:hover {
   background: var(--app-grad-bg);
-  color: #fff;
+  color: #f5f1e8;
 }
