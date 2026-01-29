@@ -17,15 +17,19 @@
   --bg-gradient-start: #faf7f5;
   --bg-gradient-end: #f5f1e8;
   --text-color: #2d3748;
+  --app-body-bg: #e4e6df;
   --app-bar-bg: linear-gradient(90deg, #f19d1d 0%, #e88e44 50%, #c43f01 100%);
+  --app-grad-bg: radial-gradient(circle,  #f19d1d 53%, #e88e44 70%, #c43f01 100%);
   --app-bar-shadow: rgba(139, 76, 46, 0.4);
 }
 
 body.dark-theme {
   --bg-gradient-start: #1a1a1a;
   --bg-gradient-end: #161617;
+  --app-body-bg: #4d4c4b;
   --text-color: #e3e1d6;
   --app-bar-bg: linear-gradient(90deg, #a36508 0%, #853c00 50%, #892b00 100%);
+  --app-grad-bg: radial-gradient(circle, #a36508 53%, #853c00 70%, #892b00 100%);
   --app-bar-shadow: rgba(0, 0, 0, 0.5);
 }
 
@@ -57,16 +61,24 @@ main {
   margin: 5px;
   padding: 10px;
   border-radius: 10px;
+  font-weight: bold;
   background: var(--app-bar-bg);
   box-shadow: 0 4px 20px var(--app-bar-shadow);
 }
 
 .home-callout {
-  background: var(--app-bar-bg);
+  background: var(--app-grad-bg);
   border-radius: 20px;
-  padding:50px 10px 50px;
+  padding:100px 10px 100px;
 }
 
 .home-callout h1{
   font-size: 4rem;
+}
+
+.about-page {
+  background: var(--app-body-bg);
+  border-radius: 15px;
+  padding: 10px 10px 100px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
