@@ -11057,3 +11057,115 @@ Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached
 
 
   [1m[36mContact Load (2.2ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" /* loading for pp */ LIMIT 11 /*application='Saasapp'*/[0m
+Started GET "/contacts/new" for ::1 at 2026-01-30 09:51:00 +0000
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (Duration: 1.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | GC: 0.3ms)
+Completed 200 OK in 10ms (Views: 6.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.4ms)
+
+
+Started POST "/contacts" for ::1 at 2026-01-30 09:51:10 +0000
+Processing by ContactsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "contact" => {"name" => "hello", "email" => "[FILTERED]", "message" => ""}, "commit" => "Send Message"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='Saasapp',controller='contacts'*/[0m
+  ↳ app/controllers/contacts_controller.rb:8:in 'ContactsController#create'
+  [1m[36mContact Create (1.8ms)[0m  [1m[32mINSERT INTO "contacts" ("name", "email", "message", "created_at", "updated_at") VALUES ('hello', '', '', '2026-01-30 09:51:10.975877', '2026-01-30 09:51:10.975877') RETURNING "id" /*action='create',application='Saasapp',controller='contacts'*/[0m
+  ↳ app/controllers/contacts_controller.rb:8:in 'ContactsController#create'
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='Saasapp',controller='contacts'*/[0m
+  ↳ app/controllers/contacts_controller.rb:8:in 'ContactsController#create'
+Redirected to http://127.0.0.1:3000/contacts/new
+↳ app/controllers/contacts_controller.rb:9:in 'ContactsController#create'
+Completed 302 Found in 10ms (ActiveRecord: 4.8ms (1 query, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/contacts/new" for ::1 at 2026-01-30 09:51:11 +0000
+Processing by ContactsController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (Duration: 2.3ms | GC: 0.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | GC: 0.4ms)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.4ms)
+
+
+  [1m[36mContact Load (4.2ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" /* loading for pp */ LIMIT 11 /*application='Saasapp'*/[0m
+  [1m[36mContact Load (0.2ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" WHERE "contacts"."id" = 7 LIMIT 1 /*application='Saasapp'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='Saasapp'*/[0m
+  [1m[36mContact Destroy (0.7ms)[0m  [1m[31mDELETE FROM "contacts" WHERE "contacts"."id" = 7 /*application='Saasapp'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='Saasapp'*/[0m
+  [1m[36mContact Load (0.2ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" /* loading for pp */ LIMIT 11 /*application='Saasapp'*/[0m
+Started GET "/" for ::1 at 2026-01-30 10:32:24 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Saasapp'*/[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 47.7ms | GC: 0.0ms)
+Completed 200 OK in 65ms (Views: 51.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/contacts/new" for ::1 at 2026-01-30 10:32:27 +0000
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (Duration: 3.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | GC: 0.0ms)
+Completed 200 OK in 20ms (Views: 5.2ms | ActiveRecord: 1.8ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/contacts" for ::1 at 2026-01-30 10:33:15 +0000
+Processing by ContactsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "contact" => {"name" => "Steven Strange", "email" => "[FILTERED]", "message" => "Dark Hold"}, "commit" => "Send Message"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='Saasapp',controller='contacts'*/[0m
+  ↳ app/controllers/contacts_controller.rb:8:in 'ContactsController#create'
+  [1m[36mContact Create (1.8ms)[0m  [1m[32mINSERT INTO "contacts" ("name", "email", "message", "created_at", "updated_at") VALUES ('Steven Strange', 'doctor@strange.com', 'Dark Hold', '2026-01-30 10:33:15.292010', '2026-01-30 10:33:15.292010') RETURNING "id" /*action='create',application='Saasapp',controller='contacts'*/[0m
+  ↳ app/controllers/contacts_controller.rb:8:in 'ContactsController#create'
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='Saasapp',controller='contacts'*/[0m
+  ↳ app/controllers/contacts_controller.rb:8:in 'ContactsController#create'
+Redirected to http://127.0.0.1:3000/contacts/new
+↳ app/controllers/contacts_controller.rb:9:in 'ContactsController#create'
+Completed 302 Found in 11ms (ActiveRecord: 3.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/contacts/new" for ::1 at 2026-01-30 10:33:15 +0000
+Processing by ContactsController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (Duration: 1.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | GC: 0.0ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/contacts/new" for ::1 at 2026-01-30 10:36:38 +0000
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (Duration: 2.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | GC: 0.5ms)
+Completed 200 OK in 12ms (Views: 6.1ms | ActiveRecord: 1.1ms (0 queries, 0 cached) | GC: 1.1ms)
+
+
+Started POST "/contacts" for ::1 at 2026-01-30 10:37:47 +0000
+Processing by ContactsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "contact" => {"name" => "Albert Einstien", "email" => "[FILTERED]", "message" => "I know the rules of the game"}, "commit" => "Send Message"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='Saasapp',controller='contacts'*/[0m
+  ↳ app/controllers/contacts_controller.rb:8:in 'ContactsController#create'
+  [1m[36mContact Create (1.1ms)[0m  [1m[32mINSERT INTO "contacts" ("name", "email", "message", "created_at", "updated_at") VALUES ('Albert Einstien', 'einstien@universe.com', 'I know the rules of the game', '2026-01-30 10:37:47.399881', '2026-01-30 10:37:47.399881') RETURNING "id" /*action='create',application='Saasapp',controller='contacts'*/[0m
+  ↳ app/controllers/contacts_controller.rb:8:in 'ContactsController#create'
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='Saasapp',controller='contacts'*/[0m
+  ↳ app/controllers/contacts_controller.rb:8:in 'ContactsController#create'
+Redirected to http://127.0.0.1:3000/contacts/new
+↳ app/controllers/contacts_controller.rb:9:in 'ContactsController#create'
+Completed 302 Found in 9ms (ActiveRecord: 3.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/contacts/new" for ::1 at 2026-01-30 10:37:47 +0000
+Processing by ContactsController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (Duration: 2.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | GC: 0.0ms)
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.6ms)
+
+

@@ -18,10 +18,23 @@
         </div>
         <div class="d-grid">
           <%= form.submit "Send Message", class: "btn form-submit"%>
-          <span class="text-success"><%= flash[:notice] %></span>
+          <span class="text-success alert-dismissible fade show"><%= flash[:notice] %></span>
+          <span class="text-danger alert-dismissible fade show"><%= flash[:alert] %></span>
         </div>
       <% end %>
       </div>
     </div>
   </div>
 </div>
+
+<script>
+  (function() {
+    setTimeout(function() {
+      var alerts = document.querySelectorAll('.alert-dismissible');
+      alerts.forEach(function(element) {
+        element.classList.remove('show');
+        setTimeout(function() { element.remove(); }, 500);
+      });
+    }, 3000);
+  })();
+</script>
