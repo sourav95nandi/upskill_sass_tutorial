@@ -3,7 +3,7 @@
     <div class="col-md-5">
       <h1 class="text-center my-4" style="font-weight: bold;">Contact Us</h1>
       <div class="well p-4 mb-4 shadow-sm rounded-3" style="background: var(--app-body-bg); box-shadow: 0 4px 15px var(--app-bar-shadow);">
-      <%= form_with url: contacts_path, local: true do |form| %>
+        <%= form_with model: @contact, local: true do |form| %>
         <div class="mb-3">
           <%= form.label :name, class: "form-label" %>
           <%= form.text_field :name, class: "form-control" %>
@@ -18,6 +18,7 @@
         </div>
         <div class="d-grid">
           <%= form.submit "Send Message", class: "btn form-submit"%>
+          <span class="text-success"><%= flash[:notice] %></span>
         </div>
       <% end %>
       </div>

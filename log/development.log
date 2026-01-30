@@ -10584,3 +10584,476 @@ Migrating to CreateContact (20260130082355)
   [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20260130082355') RETURNING "version" /*application='Saasapp'*/[0m
   [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='Saasapp'*/[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Saasapp'*/[0m
+Started GET "/" for ::1 at 2026-01-30 09:00:19 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Saasapp'*/[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | GC: 0.0ms)
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/contacts/new" for ::1 at 2026-01-30 09:00:20 +0000
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (Duration: 2.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2026-01-30 09:00:23 +0000
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | GC: 0.0ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/contacts/new" for ::1 at 2026-01-30 09:00:27 +0000
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (Duration: 1.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | GC: 0.0ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/contacts/new" for ::1 at 2026-01-30 09:10:58 +0000
+  
+ArgumentError (Reported error must be an Exception, got: #<SyntaxError:"/workspaces/demo_site/app/controllers/contacts_controller.rb:21: syntax error found\n  \e[2m19 | \e[mend\n  \e[2m20 | \e[m\n\e[1;31m> \e[m\e[2m21 | \e[mend\n  \e[2m   | \e[m\e[1;31m^~~\e[m unexpected 'end', ignoring it\n">)
+Caused by: SyntaxError (/workspaces/demo_site/app/controllers/contacts_controller.rb:21: syntax error found
+  [2m19 | [mend
+  [2m20 | [m
+[1;31m> [m[2m21 | [mend
+  [2m   | [m[1;31m^~~[m unexpected 'end', ignoring it
+)
+
+Information for: ArgumentError (Reported error must be an Exception, got: #<SyntaxError:"/workspaces/demo_site/app/controllers/contacts_controller.rb:21: syntax error found\n  \e[2m19 | \e[mend\n  \e[2m20 | \e[m\n\e[1;31m> \e[m\e[2m21 | \e[mend\n  \e[2m   | \e[m\e[1;31m^~~\e[m unexpected 'end', ignoring it\n">):
+  
+activesupport (8.1.2) lib/active_support/error_reporter.rb:235:in 'ActiveSupport::ErrorReporter#report'
+actionpack (8.1.2) lib/action_dispatch/middleware/executor.rb:36:in 'ActionDispatch::Executor#call'
+actionpack (8.1.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in 'ActionDispatch::ActionableExceptions#call'
+actionpack (8.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:31:in 'ActionDispatch::DebugExceptions#call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in 'WebConsole::Middleware#call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in 'block in WebConsole::Middleware#call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'Kernel#catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'WebConsole::Middleware#call'
+actionpack (8.1.2) lib/action_dispatch/middleware/show_exceptions.rb:32:in 'ActionDispatch::ShowExceptions#call'
+railties (8.1.2) lib/rails/rack/logger.rb:41:in 'Rails::Rack::Logger#call_app'
+railties (8.1.2) lib/rails/rack/logger.rb:29:in 'Rails::Rack::Logger#call'
+propshaft (1.3.1) lib/propshaft/quiet_assets.rb:11:in 'Propshaft::QuietAssets#call'
+actionpack (8.1.2) lib/action_dispatch/middleware/remote_ip.rb:98:in 'ActionDispatch::RemoteIp#call'
+actionpack (8.1.2) lib/action_dispatch/middleware/request_id.rb:34:in 'ActionDispatch::RequestId#call'
+rack (3.2.4) lib/rack/method_override.rb:28:in 'Rack::MethodOverride#call'
+rack (3.2.4) lib/rack/runtime.rb:24:in 'Rack::Runtime#call'
+activesupport (8.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:30:in 'ActiveSupport::Cache::Strategy::LocalCache::Middleware#call'
+actionpack (8.1.2) lib/action_dispatch/middleware/server_timing.rb:61:in 'block in ActionDispatch::ServerTiming#call'
+actionpack (8.1.2) lib/action_dispatch/middleware/server_timing.rb:26:in 'ActionDispatch::ServerTiming::Subscriber#collect_events'
+actionpack (8.1.2) lib/action_dispatch/middleware/server_timing.rb:60:in 'ActionDispatch::ServerTiming#call'
+actionpack (8.1.2) lib/action_dispatch/middleware/executor.rb:20:in 'ActionDispatch::Executor#call'
+propshaft (1.3.1) lib/propshaft/server.rb:37:in 'Propshaft::Server#call'
+actionpack (8.1.2) lib/action_dispatch/middleware/static.rb:27:in 'ActionDispatch::Static#call'
+rack (3.2.4) lib/rack/sendfile.rb:131:in 'Rack::Sendfile#call'
+actionpack (8.1.2) lib/action_dispatch/middleware/host_authorization.rb:143:in 'ActionDispatch::HostAuthorization#call'
+railties (8.1.2) lib/rails/engine.rb:534:in 'Rails::Engine#call'
+puma (7.2.0) lib/puma/configuration.rb:296:in 'Puma::Configuration::ConfigMiddleware#call'
+puma (7.2.0) lib/puma/request.rb:103:in 'block in Puma::Request#handle_request'
+puma (7.2.0) lib/puma/thread_pool.rb:355:in 'Puma::ThreadPool#with_force_shutdown'
+puma (7.2.0) lib/puma/request.rb:102:in 'Puma::Request#handle_request'
+puma (7.2.0) lib/puma/server.rb:503:in 'Puma::Server#process_client'
+puma (7.2.0) lib/puma/server.rb:262:in 'block in Puma::Server#run'
+puma (7.2.0) lib/puma/thread_pool.rb:182:in 'block in Puma::ThreadPool#spawn_thread'
+
+Information for cause: SyntaxError (/workspaces/demo_site/app/controllers/contacts_controller.rb:21: syntax error found
+  [2m19 | [mend
+  [2m20 | [m
+[1;31m> [m[2m21 | [mend
+  [2m   | [m[1;31m^~~[m unexpected 'end', ignoring it
+):
+  
+app/controllers/contacts_controller.rb:21: syntax error found
+Started GET "/contacts/new" for ::1 at 2026-01-30 09:11:33 +0000
+  
+ArgumentError (Reported error must be an Exception, got: #<SyntaxError:"/workspaces/demo_site/app/controllers/contacts_controller.rb:21: syntax error found\n  \e[2m19 | \e[mend\n  \e[2m20 | \e[m\n\e[1;31m> \e[m\e[2m21 | \e[mend\n  \e[2m   | \e[m\e[1;31m^~~\e[m unexpected 'end', ignoring it\n">)
+Caused by: SyntaxError (/workspaces/demo_site/app/controllers/contacts_controller.rb:21: syntax error found
+  [2m19 | [mend
+  [2m20 | [m
+[1;31m> [m[2m21 | [mend
+  [2m   | [m[1;31m^~~[m unexpected 'end', ignoring it
+)
+
+Information for: ArgumentError (Reported error must be an Exception, got: #<SyntaxError:"/workspaces/demo_site/app/controllers/contacts_controller.rb:21: syntax error found\n  \e[2m19 | \e[mend\n  \e[2m20 | \e[m\n\e[1;31m> \e[m\e[2m21 | \e[mend\n  \e[2m   | \e[m\e[1;31m^~~\e[m unexpected 'end', ignoring it\n">):
+  
+activesupport (8.1.2) lib/active_support/error_reporter.rb:235:in 'ActiveSupport::ErrorReporter#report'
+actionpack (8.1.2) lib/action_dispatch/middleware/executor.rb:36:in 'ActionDispatch::Executor#call'
+actionpack (8.1.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in 'ActionDispatch::ActionableExceptions#call'
+actionpack (8.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:31:in 'ActionDispatch::DebugExceptions#call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in 'WebConsole::Middleware#call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in 'block in WebConsole::Middleware#call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'Kernel#catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'WebConsole::Middleware#call'
+actionpack (8.1.2) lib/action_dispatch/middleware/show_exceptions.rb:32:in 'ActionDispatch::ShowExceptions#call'
+railties (8.1.2) lib/rails/rack/logger.rb:41:in 'Rails::Rack::Logger#call_app'
+railties (8.1.2) lib/rails/rack/logger.rb:29:in 'Rails::Rack::Logger#call'
+propshaft (1.3.1) lib/propshaft/quiet_assets.rb:11:in 'Propshaft::QuietAssets#call'
+actionpack (8.1.2) lib/action_dispatch/middleware/remote_ip.rb:98:in 'ActionDispatch::RemoteIp#call'
+actionpack (8.1.2) lib/action_dispatch/middleware/request_id.rb:34:in 'ActionDispatch::RequestId#call'
+rack (3.2.4) lib/rack/method_override.rb:28:in 'Rack::MethodOverride#call'
+rack (3.2.4) lib/rack/runtime.rb:24:in 'Rack::Runtime#call'
+activesupport (8.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:30:in 'ActiveSupport::Cache::Strategy::LocalCache::Middleware#call'
+actionpack (8.1.2) lib/action_dispatch/middleware/server_timing.rb:61:in 'block in ActionDispatch::ServerTiming#call'
+actionpack (8.1.2) lib/action_dispatch/middleware/server_timing.rb:26:in 'ActionDispatch::ServerTiming::Subscriber#collect_events'
+actionpack (8.1.2) lib/action_dispatch/middleware/server_timing.rb:60:in 'ActionDispatch::ServerTiming#call'
+actionpack (8.1.2) lib/action_dispatch/middleware/executor.rb:20:in 'ActionDispatch::Executor#call'
+propshaft (1.3.1) lib/propshaft/server.rb:37:in 'Propshaft::Server#call'
+actionpack (8.1.2) lib/action_dispatch/middleware/static.rb:27:in 'ActionDispatch::Static#call'
+rack (3.2.4) lib/rack/sendfile.rb:131:in 'Rack::Sendfile#call'
+actionpack (8.1.2) lib/action_dispatch/middleware/host_authorization.rb:143:in 'ActionDispatch::HostAuthorization#call'
+railties (8.1.2) lib/rails/engine.rb:534:in 'Rails::Engine#call'
+puma (7.2.0) lib/puma/configuration.rb:296:in 'Puma::Configuration::ConfigMiddleware#call'
+puma (7.2.0) lib/puma/request.rb:103:in 'block in Puma::Request#handle_request'
+puma (7.2.0) lib/puma/thread_pool.rb:355:in 'Puma::ThreadPool#with_force_shutdown'
+puma (7.2.0) lib/puma/request.rb:102:in 'Puma::Request#handle_request'
+puma (7.2.0) lib/puma/server.rb:503:in 'Puma::Server#process_client'
+puma (7.2.0) lib/puma/server.rb:262:in 'block in Puma::Server#run'
+puma (7.2.0) lib/puma/thread_pool.rb:182:in 'block in Puma::ThreadPool#spawn_thread'
+
+Information for cause: SyntaxError (/workspaces/demo_site/app/controllers/contacts_controller.rb:21: syntax error found
+  [2m19 | [mend
+  [2m20 | [m
+[1;31m> [m[2m21 | [mend
+  [2m   | [m[1;31m^~~[m unexpected 'end', ignoring it
+):
+  
+app/controllers/contacts_controller.rb:21: syntax error found
+Started GET "/contacts/new" for ::1 at 2026-01-30 09:11:35 +0000
+  
+ArgumentError (Reported error must be an Exception, got: #<SyntaxError:"/workspaces/demo_site/app/controllers/contacts_controller.rb:21: syntax error found\n  \e[2m19 | \e[mend\n  \e[2m20 | \e[m\n\e[1;31m> \e[m\e[2m21 | \e[mend\n  \e[2m   | \e[m\e[1;31m^~~\e[m unexpected 'end', ignoring it\n">)
+Caused by: SyntaxError (/workspaces/demo_site/app/controllers/contacts_controller.rb:21: syntax error found
+  [2m19 | [mend
+  [2m20 | [m
+[1;31m> [m[2m21 | [mend
+  [2m   | [m[1;31m^~~[m unexpected 'end', ignoring it
+)
+
+Information for: ArgumentError (Reported error must be an Exception, got: #<SyntaxError:"/workspaces/demo_site/app/controllers/contacts_controller.rb:21: syntax error found\n  \e[2m19 | \e[mend\n  \e[2m20 | \e[m\n\e[1;31m> \e[m\e[2m21 | \e[mend\n  \e[2m   | \e[m\e[1;31m^~~\e[m unexpected 'end', ignoring it\n">):
+  
+activesupport (8.1.2) lib/active_support/error_reporter.rb:235:in 'ActiveSupport::ErrorReporter#report'
+actionpack (8.1.2) lib/action_dispatch/middleware/executor.rb:36:in 'ActionDispatch::Executor#call'
+actionpack (8.1.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in 'ActionDispatch::ActionableExceptions#call'
+actionpack (8.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:31:in 'ActionDispatch::DebugExceptions#call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in 'WebConsole::Middleware#call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in 'block in WebConsole::Middleware#call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'Kernel#catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'WebConsole::Middleware#call'
+actionpack (8.1.2) lib/action_dispatch/middleware/show_exceptions.rb:32:in 'ActionDispatch::ShowExceptions#call'
+railties (8.1.2) lib/rails/rack/logger.rb:41:in 'Rails::Rack::Logger#call_app'
+railties (8.1.2) lib/rails/rack/logger.rb:29:in 'Rails::Rack::Logger#call'
+propshaft (1.3.1) lib/propshaft/quiet_assets.rb:11:in 'Propshaft::QuietAssets#call'
+actionpack (8.1.2) lib/action_dispatch/middleware/remote_ip.rb:98:in 'ActionDispatch::RemoteIp#call'
+actionpack (8.1.2) lib/action_dispatch/middleware/request_id.rb:34:in 'ActionDispatch::RequestId#call'
+rack (3.2.4) lib/rack/method_override.rb:28:in 'Rack::MethodOverride#call'
+rack (3.2.4) lib/rack/runtime.rb:24:in 'Rack::Runtime#call'
+activesupport (8.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:30:in 'ActiveSupport::Cache::Strategy::LocalCache::Middleware#call'
+actionpack (8.1.2) lib/action_dispatch/middleware/server_timing.rb:61:in 'block in ActionDispatch::ServerTiming#call'
+actionpack (8.1.2) lib/action_dispatch/middleware/server_timing.rb:26:in 'ActionDispatch::ServerTiming::Subscriber#collect_events'
+actionpack (8.1.2) lib/action_dispatch/middleware/server_timing.rb:60:in 'ActionDispatch::ServerTiming#call'
+actionpack (8.1.2) lib/action_dispatch/middleware/executor.rb:20:in 'ActionDispatch::Executor#call'
+propshaft (1.3.1) lib/propshaft/server.rb:37:in 'Propshaft::Server#call'
+actionpack (8.1.2) lib/action_dispatch/middleware/static.rb:27:in 'ActionDispatch::Static#call'
+rack (3.2.4) lib/rack/sendfile.rb:131:in 'Rack::Sendfile#call'
+actionpack (8.1.2) lib/action_dispatch/middleware/host_authorization.rb:143:in 'ActionDispatch::HostAuthorization#call'
+railties (8.1.2) lib/rails/engine.rb:534:in 'Rails::Engine#call'
+puma (7.2.0) lib/puma/configuration.rb:296:in 'Puma::Configuration::ConfigMiddleware#call'
+puma (7.2.0) lib/puma/request.rb:103:in 'block in Puma::Request#handle_request'
+puma (7.2.0) lib/puma/thread_pool.rb:355:in 'Puma::ThreadPool#with_force_shutdown'
+puma (7.2.0) lib/puma/request.rb:102:in 'Puma::Request#handle_request'
+puma (7.2.0) lib/puma/server.rb:503:in 'Puma::Server#process_client'
+puma (7.2.0) lib/puma/server.rb:262:in 'block in Puma::Server#run'
+puma (7.2.0) lib/puma/thread_pool.rb:182:in 'block in Puma::ThreadPool#spawn_thread'
+
+Information for cause: SyntaxError (/workspaces/demo_site/app/controllers/contacts_controller.rb:21: syntax error found
+  [2m19 | [mend
+  [2m20 | [m
+[1;31m> [m[2m21 | [mend
+  [2m   | [m[1;31m^~~[m unexpected 'end', ignoring it
+):
+  
+app/controllers/contacts_controller.rb:21: syntax error found
+Started GET "/contacts/new" for ::1 at 2026-01-30 09:14:32 +0000
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (Duration: 2.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | GC: 0.6ms)
+Completed 200 OK in 178ms (Views: 6.8ms | ActiveRecord: 1.7ms (0 queries, 0 cached) | GC: 3.2ms)
+
+
+Started POST "/contacts" for ::1 at 2026-01-30 09:15:12 +0000
+Processing by ContactsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "contact" => {"name" => "Jhon Doe", "email" => "[FILTERED]", "message" => "Death to infidels"}, "commit" => "Send Message"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='Saasapp',controller='contacts'*/[0m
+  ↳ app/controllers/contacts_controller.rb:8:in 'ContactsController#create'
+  [1m[36mContact Create (1.8ms)[0m  [1m[32mINSERT INTO "contacts" ("name", "email", "message", "created_at", "updated_at") VALUES ('Jhon Doe', 'jhon@doe.isis', 'Death to infidels', '2026-01-30 09:15:12.224265', '2026-01-30 09:15:12.224265') RETURNING "id" /*action='create',application='Saasapp',controller='contacts'*/[0m
+  ↳ app/controllers/contacts_controller.rb:8:in 'ContactsController#create'
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='Saasapp',controller='contacts'*/[0m
+  ↳ app/controllers/contacts_controller.rb:8:in 'ContactsController#create'
+Redirected to http://127.0.0.1:3000/
+↳ app/controllers/contacts_controller.rb:9:in 'ContactsController#create'
+Completed 302 Found in 12ms (ActiveRecord: 4.6ms (1 query, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/" for ::1 at 2026-01-30 09:15:12 +0000
+Processing by PagesController#home as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | GC: 0.3ms)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/" for ::1 at 2026-01-30 09:16:09 +0000
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | GC: 0.0ms)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/contacts/new" for ::1 at 2026-01-30 09:16:11 +0000
+  
+ArgumentError (Reported error must be an Exception, got: #<SyntaxError:"/workspaces/demo_site/app/controllers/contacts_controller.rb:9: syntax errors found\n  \e[2m7 | \e[m    @contact = Contact.new(contact_params)\n  \e[2m8 | \e[m    if @contact.save\n\e[1;31m> \e[m\e[2m9 | \e[m      notice: 'Your message has been sent s ...\n  \e[2m  | \e[m            \e[1;31m^\e[m unexpected ':', ignoring it\n  \e[2m  | \e[m            \e[1;31m^\e[m unexpected ':', expecting end-of-input\n  \e[2m10 | \e[m    else\n  \e[2m11 | \e[m      flash.now[:notice] = 'There was an error sending your message.'\n">)
+Caused by: SyntaxError (/workspaces/demo_site/app/controllers/contacts_controller.rb:9: syntax errors found
+  [2m7 | [m    @contact = Contact.new(contact_params)
+  [2m8 | [m    if @contact.save
+[1;31m> [m[2m9 | [m      notice: 'Your message has been sent s ...
+  [2m  | [m            [1;31m^[m unexpected ':', ignoring it
+  [2m  | [m            [1;31m^[m unexpected ':', expecting end-of-input
+  [2m10 | [m    else
+  [2m11 | [m      flash.now[:notice] = 'There was an error sending your message.'
+)
+
+Information for: ArgumentError (Reported error must be an Exception, got: #<SyntaxError:"/workspaces/demo_site/app/controllers/contacts_controller.rb:9: syntax errors found\n  \e[2m7 | \e[m    @contact = Contact.new(contact_params)\n  \e[2m8 | \e[m    if @contact.save\n\e[1;31m> \e[m\e[2m9 | \e[m      notice: 'Your message has been sent s ...\n  \e[2m  | \e[m            \e[1;31m^\e[m unexpected ':', ignoring it\n  \e[2m  | \e[m            \e[1;31m^\e[m unexpected ':', expecting end-of-input\n  \e[2m10 | \e[m    else\n  \e[2m11 | \e[m      flash.now[:notice] = 'There was an error sending your message.'\n">):
+  
+activesupport (8.1.2) lib/active_support/error_reporter.rb:235:in 'ActiveSupport::ErrorReporter#report'
+actionpack (8.1.2) lib/action_dispatch/middleware/executor.rb:36:in 'ActionDispatch::Executor#call'
+actionpack (8.1.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in 'ActionDispatch::ActionableExceptions#call'
+actionpack (8.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:31:in 'ActionDispatch::DebugExceptions#call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in 'WebConsole::Middleware#call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in 'block in WebConsole::Middleware#call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'Kernel#catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in 'WebConsole::Middleware#call'
+actionpack (8.1.2) lib/action_dispatch/middleware/show_exceptions.rb:32:in 'ActionDispatch::ShowExceptions#call'
+railties (8.1.2) lib/rails/rack/logger.rb:41:in 'Rails::Rack::Logger#call_app'
+railties (8.1.2) lib/rails/rack/logger.rb:29:in 'Rails::Rack::Logger#call'
+propshaft (1.3.1) lib/propshaft/quiet_assets.rb:11:in 'Propshaft::QuietAssets#call'
+actionpack (8.1.2) lib/action_dispatch/middleware/remote_ip.rb:98:in 'ActionDispatch::RemoteIp#call'
+actionpack (8.1.2) lib/action_dispatch/middleware/request_id.rb:34:in 'ActionDispatch::RequestId#call'
+rack (3.2.4) lib/rack/method_override.rb:28:in 'Rack::MethodOverride#call'
+rack (3.2.4) lib/rack/runtime.rb:24:in 'Rack::Runtime#call'
+activesupport (8.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:30:in 'ActiveSupport::Cache::Strategy::LocalCache::Middleware#call'
+actionpack (8.1.2) lib/action_dispatch/middleware/server_timing.rb:61:in 'block in ActionDispatch::ServerTiming#call'
+actionpack (8.1.2) lib/action_dispatch/middleware/server_timing.rb:26:in 'ActionDispatch::ServerTiming::Subscriber#collect_events'
+actionpack (8.1.2) lib/action_dispatch/middleware/server_timing.rb:60:in 'ActionDispatch::ServerTiming#call'
+actionpack (8.1.2) lib/action_dispatch/middleware/executor.rb:20:in 'ActionDispatch::Executor#call'
+propshaft (1.3.1) lib/propshaft/server.rb:37:in 'Propshaft::Server#call'
+actionpack (8.1.2) lib/action_dispatch/middleware/static.rb:27:in 'ActionDispatch::Static#call'
+rack (3.2.4) lib/rack/sendfile.rb:131:in 'Rack::Sendfile#call'
+actionpack (8.1.2) lib/action_dispatch/middleware/host_authorization.rb:143:in 'ActionDispatch::HostAuthorization#call'
+railties (8.1.2) lib/rails/engine.rb:534:in 'Rails::Engine#call'
+puma (7.2.0) lib/puma/configuration.rb:296:in 'Puma::Configuration::ConfigMiddleware#call'
+puma (7.2.0) lib/puma/request.rb:103:in 'block in Puma::Request#handle_request'
+puma (7.2.0) lib/puma/thread_pool.rb:355:in 'Puma::ThreadPool#with_force_shutdown'
+puma (7.2.0) lib/puma/request.rb:102:in 'Puma::Request#handle_request'
+puma (7.2.0) lib/puma/server.rb:503:in 'Puma::Server#process_client'
+puma (7.2.0) lib/puma/server.rb:262:in 'block in Puma::Server#run'
+puma (7.2.0) lib/puma/thread_pool.rb:182:in 'block in Puma::ThreadPool#spawn_thread'
+
+Information for cause: SyntaxError (/workspaces/demo_site/app/controllers/contacts_controller.rb:9: syntax errors found
+  [2m7 | [m    @contact = Contact.new(contact_params)
+  [2m8 | [m    if @contact.save
+[1;31m> [m[2m9 | [m      notice: 'Your message has been sent s ...
+  [2m  | [m            [1;31m^[m unexpected ':', ignoring it
+  [2m  | [m            [1;31m^[m unexpected ':', expecting end-of-input
+  [2m10 | [m    else
+  [2m11 | [m      flash.now[:notice] = 'There was an error sending your message.'
+):
+  
+app/controllers/contacts_controller.rb:9: syntax errors found
+Started GET "/contacts/new" for ::1 at 2026-01-30 09:16:40 +0000
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (Duration: 3.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | GC: 0.8ms)
+Completed 200 OK in 38ms (Views: 18.1ms | ActiveRecord: 6.0ms (0 queries, 0 cached) | GC: 1.3ms)
+
+
+Started GET "/contacts/new" for ::1 at 2026-01-30 09:17:22 +0000
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (Duration: 2.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | GC: 0.6ms)
+Completed 200 OK in 14ms (Views: 6.9ms | ActiveRecord: 1.0ms (0 queries, 0 cached) | GC: 1.8ms)
+
+
+Started POST "/contacts" for ::1 at 2026-01-30 09:18:08 +0000
+Processing by ContactsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "contact" => {"name" => "will Smith", "email" => "[FILTERED]", "message" => "Let the credits roll"}, "commit" => "Send Message"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='Saasapp',controller='contacts'*/[0m
+  ↳ app/controllers/contacts_controller.rb:8:in 'ContactsController#create'
+  [1m[36mContact Create (1.4ms)[0m  [1m[32mINSERT INTO "contacts" ("name", "email", "message", "created_at", "updated_at") VALUES ('will Smith', 'will@smith.com', 'Let the credits roll', '2026-01-30 09:18:08.662076', '2026-01-30 09:18:08.662076') RETURNING "id" /*action='create',application='Saasapp',controller='contacts'*/[0m
+  ↳ app/controllers/contacts_controller.rb:8:in 'ContactsController#create'
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='Saasapp',controller='contacts'*/[0m
+  ↳ app/controllers/contacts_controller.rb:8:in 'ContactsController#create'
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (Duration: 2.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | GC: 0.0ms)
+Completed 200 OK in 13ms (Views: 3.8ms | ActiveRecord: 3.7ms (1 query, 0 cached) | GC: 0.5ms)
+
+
+  [1m[36mContact Load (2.3ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" /* loading for pp */ LIMIT 11 /*application='Saasapp'*/[0m
+Started POST "/contacts" for ::1 at 2026-01-30 09:21:54 +0000
+Processing by ContactsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "contact" => {"name" => "Adam Smith", "email" => "[FILTERED]", "message" => "Wealth of nations"}, "commit" => "Send Message"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='Saasapp',controller='contacts'*/[0m
+  ↳ app/controllers/contacts_controller.rb:8:in 'ContactsController#create'
+  [1m[36mContact Create (1.5ms)[0m  [1m[32mINSERT INTO "contacts" ("name", "email", "message", "created_at", "updated_at") VALUES ('Adam Smith', 'adam@smith.com', 'Wealth of nations', '2026-01-30 09:21:54.113621', '2026-01-30 09:21:54.113621') RETURNING "id" /*action='create',application='Saasapp',controller='contacts'*/[0m
+  ↳ app/controllers/contacts_controller.rb:8:in 'ContactsController#create'
+  [1m[36mTRANSACTION (8.4ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='Saasapp',controller='contacts'*/[0m
+  ↳ app/controllers/contacts_controller.rb:8:in 'ContactsController#create'
+Redirected to http://127.0.0.1:3000/contacts/new
+↳ app/controllers/contacts_controller.rb:9:in 'ContactsController#create'
+Completed 302 Found in 20ms (ActiveRecord: 11.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/contacts/new" for ::1 at 2026-01-30 09:21:54 +0000
+Processing by ContactsController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (Duration: 3.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | GC: 0.0ms)
+Completed 200 OK in 11ms (Views: 8.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/contacts" for ::1 at 2026-01-30 09:23:36 +0000
+Processing by ContactsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "contact" => {"name" => "Allen Turing", "email" => "[FILTERED]", "message" => "Let the codes come"}, "commit" => "Send Message"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='Saasapp',controller='contacts'*/[0m
+  ↳ app/controllers/contacts_controller.rb:8:in 'ContactsController#create'
+  [1m[36mContact Create (2.5ms)[0m  [1m[32mINSERT INTO "contacts" ("name", "email", "message", "created_at", "updated_at") VALUES ('Allen Turing', 'allen@turing.com', 'Let the codes come', '2026-01-30 09:23:36.620117', '2026-01-30 09:23:36.620117') RETURNING "id" /*action='create',application='Saasapp',controller='contacts'*/[0m
+  ↳ app/controllers/contacts_controller.rb:8:in 'ContactsController#create'
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='Saasapp',controller='contacts'*/[0m
+  ↳ app/controllers/contacts_controller.rb:8:in 'ContactsController#create'
+Redirected to http://127.0.0.1:3000/contacts/new
+↳ app/controllers/contacts_controller.rb:9:in 'ContactsController#create'
+Completed 302 Found in 16ms (ActiveRecord: 6.5ms (1 query, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/contacts/new" for ::1 at 2026-01-30 09:23:36 +0000
+Processing by ContactsController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (Duration: 2.6ms | GC: 0.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | GC: 0.3ms)
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/contacts/new" for ::1 at 2026-01-30 09:24:45 +0000
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (Duration: 2.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | GC: 0.0ms)
+Completed 200 OK in 11ms (Views: 5.9ms | ActiveRecord: 1.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2026-01-30 09:24:58 +0000
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | GC: 0.0ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/about" for ::1 at 2026-01-30 09:25:00 +0000
+Processing by PagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | GC: 4.7ms)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 4.7ms)
+
+
+Started GET "/contacts/new" for ::1 at 2026-01-30 09:25:01 +0000
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (Duration: 1.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/contacts/new" for ::1 at 2026-01-30 09:25:35 +0000
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (Duration: 2.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | GC: 0.1ms)
+Completed 200 OK in 12ms (Views: 6.0ms | ActiveRecord: 1.0ms (0 queries, 0 cached) | GC: 0.3ms)
+
+
+Started POST "/contacts" for ::1 at 2026-01-30 09:26:02 +0000
+Processing by ContactsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "contact" => {"name" => "Bruce Wayne", "email" => "[FILTERED]", "message" => "i am Batman"}, "commit" => "Send Message"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='Saasapp',controller='contacts'*/[0m
+  ↳ app/controllers/contacts_controller.rb:8:in 'ContactsController#create'
+  [1m[36mContact Create (1.2ms)[0m  [1m[32mINSERT INTO "contacts" ("name", "email", "message", "created_at", "updated_at") VALUES ('Bruce Wayne', 'bruce@wayne.com', 'i am Batman', '2026-01-30 09:26:02.252166', '2026-01-30 09:26:02.252166') RETURNING "id" /*action='create',application='Saasapp',controller='contacts'*/[0m
+  ↳ app/controllers/contacts_controller.rb:8:in 'ContactsController#create'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='Saasapp',controller='contacts'*/[0m
+  ↳ app/controllers/contacts_controller.rb:8:in 'ContactsController#create'
+Redirected to http://127.0.0.1:3000/contacts/new
+↳ app/controllers/contacts_controller.rb:9:in 'ContactsController#create'
+Completed 302 Found in 8ms (ActiveRecord: 3.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/contacts/new" for ::1 at 2026-01-30 09:26:02 +0000
+Processing by ContactsController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (Duration: 2.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | GC: 0.0ms)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/contacts" for ::1 at 2026-01-30 09:27:13 +0000
+Processing by ContactsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "contact" => {"name" => "Tony Stark", "email" => "[FILTERED]", "message" => "I am Iron Man"}, "commit" => "Send Message"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*action='create',application='Saasapp',controller='contacts'*/[0m
+  ↳ app/controllers/contacts_controller.rb:8:in 'ContactsController#create'
+  [1m[36mContact Create (1.3ms)[0m  [1m[32mINSERT INTO "contacts" ("name", "email", "message", "created_at", "updated_at") VALUES ('Tony Stark', 'tony@ironman.com', 'I am Iron Man', '2026-01-30 09:27:13.457975', '2026-01-30 09:27:13.457975') RETURNING "id" /*action='create',application='Saasapp',controller='contacts'*/[0m
+  ↳ app/controllers/contacts_controller.rb:8:in 'ContactsController#create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*action='create',application='Saasapp',controller='contacts'*/[0m
+  ↳ app/controllers/contacts_controller.rb:8:in 'ContactsController#create'
+Redirected to http://127.0.0.1:3000/contacts/new
+↳ app/controllers/contacts_controller.rb:9:in 'ContactsController#create'
+Completed 302 Found in 6ms (ActiveRecord: 1.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/contacts/new" for ::1 at 2026-01-30 09:27:13 +0000
+Processing by ContactsController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (Duration: 1.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mContact Load (2.2ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" /* loading for pp */ LIMIT 11 /*application='Saasapp'*/[0m
