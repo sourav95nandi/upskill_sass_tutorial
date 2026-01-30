@@ -42,6 +42,9 @@ gem "image_processing", "~> 1.2"
 gem "font-awesome-sass"
 gem "dartsass-rails"
 
+#for structuring sql outputs in terminal
+gem "hirb"
+
 group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem "sqlite3"
