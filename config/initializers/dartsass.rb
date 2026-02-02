@@ -1,5 +1,5 @@
 Rails.application.config.dartsass.builds = {
-  "app.scss" => "app.css"
+  "application.scss" => "app.css"
 }
 
 Rails.application.config.dartsass.build_options = []
