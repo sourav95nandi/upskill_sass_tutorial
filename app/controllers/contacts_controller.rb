@@ -14,6 +14,7 @@ class ContactsController < ApplicationController
   def create
     @contact = Contact.new(contact_params)
     if @contact.save
+      ContactMailer.contact_email(@contact.name, @contact.email, @contact.message).deliver_now
       flash[:success] = 'We have received your message and will get back to you shortly.'
       redirect_to root_path
     else
