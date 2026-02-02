@@ -1,0 +1,47 @@
+.messages-container {
+  background: var(--app-body-bg);
+  box-shadow: 0 4px 15px var(--app-bar-shadow);
+  overflow: hidden;
+}
+
+.messages-table-container {
+  background: var(--app-body-bg);
+}
+
+.messages-table-container tbody {
+  display: block;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.messages-table-container thead, .messages-table-container tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.sticky-top-header {
+  background: var(--app-grad-bg);
+  color: var(--text-color);
+}
+
+.sticky-top-header th {
+  background: transparent !important;
+    color: var(--text-color) !important;
+}
+
+.messages-table-container table {
+  color: var(--text-color);
+  background: var(--app-body-bg);
+  --bs-table-bg: var(--app-body-bg);
+  --bs-table-color: var(--text-color);
+  --bs-table-hover-color: var(--text-color);
+}
+
+.messages-table-container a {
+  color: var(--text-color);
+}
+
+.message-truncate {
+  max-width: 300px;
+}

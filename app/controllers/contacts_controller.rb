@@ -1,6 +1,6 @@
 class ContactsController < ApplicationController
   def index
-    @contacts = Contact.all.order(created_at: :desc)
+    @contacts = Contact.all.order(updated_at: :desc)
   end
 
   def show
@@ -28,9 +28,9 @@ class ContactsController < ApplicationController
 
   def update
     @contact = Contact.find(params[:id])
-    if @contact.update(contact_params)
+    if @contact.update(update_contact_params)
       flash[:success] = 'Message updated successfully.'
-      redirect_to @contact
+      redirect_to contacts_path
     else
       flash[:danger] = @contact.errors.full_messages.to_sentence
       render :edit, status: :unprocessable_entity
@@ -47,5 +47,9 @@ class ContactsController < ApplicationController
   private
     def contact_params
       params.require(:contact).permit(:name, :email, :message)
+    end
+
+    def update_contact_params
+      params.require(:contact).permit(:message)
     end
 end
