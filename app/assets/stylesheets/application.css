@@ -10,8 +10,7 @@
  */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
-@import 'font-awesome-sprockets';
-@import 'font-awesome';
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
 
 :root {
   --bg-gradient-start: #faf7f5;

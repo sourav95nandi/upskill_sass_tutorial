@@ -16095,3 +16095,100 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
 
 
+Started GET "/" for ::1 at 2026-02-06 06:51:04 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Saasapp'*/[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 28.1ms | GC: 0.0ms)
+Completed 200 OK in 46ms (Views: 32.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/contacts" for ::1 at 2026-02-06 06:51:06 +0000
+Processing by ContactsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mContact Load (0.1ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" ORDER BY "contacts"."updated_at" DESC /*action='index',application='Saasapp',controller='contacts'*/[0m
+  ↳ app/views/contacts/index.html.erb:16
+  Rendered contacts/index.html.erb within layouts/application (Duration: 6.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | GC: 0.0ms)
+Completed 200 OK in 24ms (Views: 8.3ms | ActiveRecord: 1.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/contacts/13" for ::1 at 2026-02-06 06:51:14 +0000
+Processing by ContactsController#show as HTML
+  Parameters: {"id" => "13"}
+  [1m[36mContact Load (0.1ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" WHERE "contacts"."id" = 13 LIMIT 1 /*action='show',application='Saasapp',controller='contacts'*/[0m
+  ↳ app/controllers/contacts_controller.rb:7:in 'ContactsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/show.html.erb within layouts/application
+  Rendered contacts/show.html.erb within layouts/application (Duration: 0.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | GC: 0.0ms)
+Completed 200 OK in 29ms (Views: 2.4ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 20.8ms)
+
+
+Started GET "/contacts" for ::1 at 2026-02-06 06:51:15 +0000
+Processing by ContactsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mContact Load (0.2ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" ORDER BY "contacts"."updated_at" DESC /*action='index',application='Saasapp',controller='contacts'*/[0m
+  ↳ app/views/contacts/index.html.erb:16
+  Rendered contacts/index.html.erb within layouts/application (Duration: 2.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | GC: 0.0ms)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/contacts/2" for ::1 at 2026-02-06 06:51:17 +0000
+Processing by ContactsController#show as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mContact Load (0.9ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" WHERE "contacts"."id" = 2 LIMIT 1 /*action='show',application='Saasapp',controller='contacts'*/[0m
+  ↳ app/controllers/contacts_controller.rb:7:in 'ContactsController#show'
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/show.html.erb within layouts/application
+  Rendered contacts/show.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | GC: 0.0ms)
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.9ms (1 query, 0 cached) | GC: 0.8ms)
+
+
+Started GET "/contacts" for ::1 at 2026-02-06 06:51:18 +0000
+Processing by ContactsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mContact Load (0.2ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" ORDER BY "contacts"."updated_at" DESC /*action='index',application='Saasapp',controller='contacts'*/[0m
+  ↳ app/views/contacts/index.html.erb:16
+  Rendered contacts/index.html.erb within layouts/application (Duration: 2.8ms | GC: 0.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | GC: 0.6ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.6ms)
+
+
+Started GET "/" for ::1 at 2026-02-06 06:56:15 +0000
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | GC: 0.0ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2026-02-06 14:06:49 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Saasapp'*/[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 102.2ms | GC: 0.0ms)
+Completed 200 OK in 168ms (Views: 106.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/contacts" for ::1 at 2026-02-06 14:06:52 +0000
+Processing by ContactsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/index.html.erb within layouts/application
+  [1m[36mContact Load (0.2ms)[0m  [1m[34mSELECT "contacts".* FROM "contacts" ORDER BY "contacts"."updated_at" DESC /*action='index',application='Saasapp',controller='contacts'*/[0m
+  ↳ app/views/contacts/index.html.erb:16
+  Rendered contacts/index.html.erb within layouts/application (Duration: 6.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | GC: 0.0ms)
+Completed 200 OK in 25ms (Views: 8.7ms | ActiveRecord: 1.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
