@@ -44,6 +44,12 @@ gem "hirb"
 #Use devise for user authentication
 gem "devise"
 
+#Use Figaro for environment variable management
+gem "figaro"
+
+# Use Stripe for payment processing
+gem "stripe"
+
 group :development, :test do
 
   # Use sqlite3 as the database for Active Record

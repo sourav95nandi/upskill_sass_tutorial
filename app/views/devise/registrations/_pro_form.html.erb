@@ -1,0 +1,54 @@
+<script src="https://js.stripe.com/v2/"></script>
+<meta name="stripe-key" content= STRIPE_PUBLISHABLE_KEY />
+<h1 class="text-center mb-4">Pro Membership </h1>
+<h1 class="text-center mb-4">Sign Up</h1>
+<div class="about-page p-4">
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { id: 'pro_form' }) do |f| %>
+    <%= hidden_field_tag 'plan', params[:plan] %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+
+    <div class="mb-3">
+      <%= f.label :email, class: "form-label" %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
+    </div>
+
+    <div class="mb-3">
+      <%= f.label :password, class: "form-label" %>
+      <% if @minimum_password_length %>
+        <span class="form-text" style="margin-top: -10px">(<%= @minimum_password_length %> characters minimum)</span>
+      <% end %>
+      <%= f.password_field :password, autocomplete: "new-password", class: "form-control" %>
+    </div>
+
+    <div class="mb-3">
+      <%= f.label :password_confirmation, class: "form-label" %>
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control" %>
+    </div>
+
+    <div class="mb-3">
+      <%= label_tag :card_number, "Credit Card Number", class: "form-label" %>
+      <%= text_field_tag :card_number, nil, class: "form-control", data: { stripe: 'number' }, name: nil %>
+    </div>
+    <div class="row mb-3">
+      <div class="col-md-4">
+        <%= label_tag :card_cvc, "Security Code", class: "form-label" %>
+        <%= text_field_tag :card_cvc, nil, class: "form-control", data: { stripe: 'cvc' }, name: nil %>
+      </div>
+      <div class="col-md-8">
+        <%= label_tag :card_expires, "Expiration Date", class: "form-label" %>
+        <div class="d-flex">
+          <%= select_tag :exp_month, options_for_select(Date::MONTHNAMES.compact.each_with_index.map { |name, i| ["#{i+1} - #{name}", i+1] }), include_blank: "Month", class: "form-select me-2", data: { stripe: 'exp-month' }, name: nil %>
+          <%= select_tag :exp_year, options_for_select((Date.today.year..(Date.today.year+10)).to_a), include_blank: "Year", class: "form-select", data: { stripe: 'exp-year' }, name: nil %>
+        </div>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <%= f.submit "Sign up", class: "btn form-submit w-100", id: "pro_submit" %>
+    </div>
+  <% end %>
+
+  <div class="text-center">
+    <%= render "devise/shared/links" %>
+  </div>
+</div>

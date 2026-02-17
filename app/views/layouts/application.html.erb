@@ -49,7 +49,11 @@
               </li>
             </ul>
             <div class="d-flex" style="margin-right: -15px">
-              <%= link_to 'Log In', new_user_session_path, class: 'btn btn-login me-2' %>
+              <% if user_signed_in? %>
+                <%= link_to 'Log Out', destroy_user_session_path, data: { turbo_method: :delete }, class: 'btn btn-login me-2' %>
+              <% else %>
+                <%= link_to 'Log In', new_user_session_path, class: 'btn btn-login me-2' %>
+              <% end %>
               <button id="theme-toggle" class="btn btn-link text-white text-decoration-none" aria-label="Toggle dark mode">
                 <i class="fas fa-moon"></i>
               </button>

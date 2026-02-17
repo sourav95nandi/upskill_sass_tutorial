@@ -28,9 +28,9 @@ body.dark-theme {
   --bg-gradient-end: #161617;
   --app-body-bg: #4d4c4b;
   --text-color: #e3e1d6;
-  --app-bar-bg: linear-gradient(90deg, #d08109 0%, #853c00 50%, #a33d0e 100%);
-  --app-grad-bg: radial-gradient(circle, #d0830e 53%, #853c00 70%, #a33603 100%);
-  --app-bar-shadow: rgba(0, 0, 0, 0.5);
+  --app-bar-bg: linear-gradient(90deg, #d08109 0%, #b55d14 50%, #a33d0e 100%);
+  --app-grad-bg: radial-gradient(circle, #d0830e 53%, #b5611c 70%, #a33603 100%);
+  --app-bar-shadow: rgba(58, 56, 56, 0.5);
   --app-button-bg: #a36508;
 }
 
@@ -108,7 +108,7 @@ main {
 }
 
 .custom-table-header {
-  background: var(--app-bar-bg);
+  background: var(--app-grad-bg);
 }
 
 .custom-table-header th {
@@ -117,7 +117,7 @@ main {
 }
 
 .messages-table-container {
-  max-height: 60vh;
+  max-height: 70vh;
   overflow-y: auto;
 }
 
