@@ -28,9 +28,9 @@ body.dark-theme {
   --bg-gradient-end: #161617;
   --app-body-bg: #4d4c4b;
   --text-color: #e3e1d6;
-  --app-bar-bg: linear-gradient(90deg, #a36508 0%, #853c00 50%, #892b00 100%);
-  --app-grad-bg: radial-gradient(circle, #a36508 53%, #853c00 70%, #892b00 100%);
-  --app-bar-shadow: rgba(0, 0, 0, 0.5);
+  --app-bar-bg: linear-gradient(90deg, #d08109 0%, #b55d14 50%, #a33d0e 100%);
+  --app-grad-bg: radial-gradient(circle, #d0830e 53%, #b5611c 70%, #a33603 100%);
+  --app-bar-shadow: rgba(58, 56, 56, 0.5);
   --app-button-bg: #a36508;
 }
 
@@ -93,4 +93,36 @@ main {
 .form-submit:hover {
   background: var(--app-grad-bg);
   color: #f5f1e8;
+}
+
+.btn-login {
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: white;
+}
+
+.btn-login:hover {
+  background-color: rgba(255, 255, 255);
+  border-color: white;
+  color: rgb(0, 0, 0);
+}
+
+.custom-table-header {
+  background: var(--app-grad-bg);
+}
+
+.custom-table-header th {
+  background-color: transparent !important;
+  color: white;
+}
+
+.messages-table-container {
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.sticky-top-header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }

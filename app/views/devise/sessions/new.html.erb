@@ -1,0 +1,43 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+      <h2 class="mb-4">Log in</h2>
+      <div class="about-page p-4">
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <div class="mb-3">
+            <%= f.label :email, class: "form-label" %>
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
+          </div>
+
+          <div class="mb-3">
+            <%= f.label :password, class: "form-label" %>
+            <%= f.password_field :password, autocomplete: "current-password", class: "form-control" %>
+          </div>
+
+          <% if devise_mapping.rememberable? %>
+            <div class="mb-3 form-check">
+              <%= f.check_box :remember_me, class: "form-check-input" %>
+              <%= f.label :remember_me, class: "form-check-label" %>
+            </div>
+          <% end %>
+
+          <div class="mb-3">
+            <%= f.submit "Log in", class: "btn form-submit w-100" %>
+          </div>
+        <% end %>
+
+        <div class="text-center" style="margin-top: -10px">
+          <% if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+            <%= link_to "Forgot your password?", new_password_path(resource_name), class: "text-decoration-none" %>
+          <% end %>
+        </div>
+
+        <div class="mt-3 text-center">
+          <% if devise_mapping.registerable? && controller_name != 'registrations' %>
+            <%= link_to "Sign up", new_registration_path(resource_name), class: "btn btn-secondary w-50" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

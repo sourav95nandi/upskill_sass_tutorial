@@ -38,10 +38,19 @@ gem "thruster", require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 gem "image_processing", "~> 1.2"
 
+#for structuring sql outputs in terminal
+gem "hirb"
+
+#Use devise for user authentication
+gem "devise"
+
+#Use Figaro for environment variable management
+gem "figaro"
+
+# Use Stripe for payment processing
+gem "stripe"
 
 group :development, :test do
-  #for structuring sql outputs in terminal
-  gem "hirb"
 
   # Use sqlite3 as the database for Active Record
   gem "sqlite3"

@@ -1,9 +1,9 @@
 <div class="container mt-5">
   <h1 class="text-center mb-4">Messages</h1>
-  <div class="well shadow-sm rounded-3 messages-container">
+  <div class="well shadow-sm rounded-4 overflow-hidden">
     <div class="table-responsive messages-table-container">
       <table class="table table-hover mb-0">
-        <thead class="sticky-top-header">
+        <thead class="sticky-top-header custom-table-header">
           <tr>
             <th scope="col">Name</th>
             <th scope="col">Email</th>
@@ -11,7 +11,7 @@
             <th scope="col">Date</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody class ="messages-container">
           <% @contacts.each do |contact| %>
             <tr style="cursor: pointer;" onclick="window.location='<%= contact_path(contact) %>'">
               <td class="fw-bold"><%= contact.name %></td>

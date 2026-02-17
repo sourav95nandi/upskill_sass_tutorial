@@ -1,0 +1,44 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+      <% if params[:plan] == '2' %>
+        <%= render "devise/registrations/pro_form" %>
+      <% else %>
+        <h1 class="text-center mb-4">Basic Membership Sign Up</h1>
+      <div class="about-page p-4">
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= hidden_field_tag :plan, params[:plan] %>
+          <%= render "devise/shared/error_messages", resource: resource %>
+
+          <div class="mb-3">
+            <%= f.label :email, class: "form-label" %>
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
+          </div>
+
+          <div class="mb-3">
+            <%= f.label :password, class: "form-label" %>
+            <% if @minimum_password_length %>
+              <span class="form-text" style="margin-top: -10px">(<%= @minimum_password_length %> characters minimum)</span>
+            <% end %>
+            <%= f.password_field :password, autocomplete: "new-password", class: "form-control" %>
+          </div>
+
+          <div class="mb-3">
+            <%= f.label :password_confirmation, class: "form-label" %>
+            <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control" %>
+          </div>
+
+          <div class="mb-3">
+            <%= f.submit "Sign up", class: "btn form-submit w-100" %>
+          </div>
+        <% end %>
+
+        <div class="text-center">
+          <%= render "devise/shared/links" %>
+          <%= link_to "Sign up for Pro", new_user_registration_path(plan: 2), class: "btn btn-primary w-100 mt-3" %>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
