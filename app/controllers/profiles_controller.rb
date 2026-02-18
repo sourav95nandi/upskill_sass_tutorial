@@ -11,7 +11,7 @@ class ProfilesController < ApplicationController
 
         if @profile.save
             flash[:success] = 'Profile created successfully.'
-            redirect_to root_path
+            redirect_to user_path(@user)
         else
             flash.now[:danger] = @profile.errors.full_messages.to_sentence
             render :new, status: :unprocessable_entity
@@ -20,6 +20,6 @@ class ProfilesController < ApplicationController
 
     private
         def profile_params
-            params.require(:profile).permit(:first_name, :last_name, :job_title, :phone_number, :contact_email, :description)
+            params.require(:profile).permit(:first_name, :last_name, :job_title, :phone_number, :contact_email, :description, :avatar)
         end
 end
