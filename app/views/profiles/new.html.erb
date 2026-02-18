@@ -2,7 +2,10 @@
     <div class="col-md-4 offset-md-4">
         <h1 style="text-align: center;">Create Your Profile</h1>
         <p class="lead text-center">Showcase your skills and experience to attract the best opportunities.</p>
-        <div class="well" style="background-color: #f8f9fa; border: 1px solid #dee2e6; border-radius: .75rem; padding: 20px;">
+        <% flash.each do |type, msg| %>
+            <div class="alert alert-<%= type %>"><%= msg %></div>
+        <% end %>
+        <div class="well">
             <%= render 'form' %>
         </div>
     </div>

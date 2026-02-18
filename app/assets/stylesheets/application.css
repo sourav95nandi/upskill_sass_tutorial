@@ -21,6 +21,7 @@
   --app-grad-bg: radial-gradient(circle,  #f19d1d 53%, #e88e44 70%, #c43f01 100%);
   --app-bar-shadow: rgba(139, 76, 46, 0.4);
   --app-button-bg: #f19d1d;
+  --app-border-color: #dee2e6;
 }
 
 body.dark-theme {
@@ -32,6 +33,7 @@ body.dark-theme {
   --app-grad-bg: radial-gradient(circle, #d0830e 53%, #b5611c 70%, #a33603 100%);
   --app-bar-shadow: rgba(58, 56, 56, 0.5);
   --app-button-bg: #a36508;
+  --app-border-color: rgba(255, 255, 255, 0.2);
 }
 
 html {
@@ -125,4 +127,11 @@ main {
   position: sticky;
   top: 0;
   z-index: 1;
+}
+
+.well {
+  background-color: var(--app-body-bg);
+  border: 1px solid var(--app-border-color);
+  border-radius: .75rem;
+  padding: 20px;
 }
