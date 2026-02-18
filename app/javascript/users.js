@@ -9,7 +9,10 @@ $(document).on('turbo:load', function() {
     submitBtn.on('click', function(event) {
         event.preventDefault();
         submitBtn.val('Processing...').prop('disabled', true);
-
+        
+        setTimeout(() => {console.log("Waited for 5 seconds");}, 5000);
+        
+        // Collect the credit card fields
         var ccNum = $('#card_number').val(),
             cvcNum = $('#card_cvc').val(),
             expMonth = $('#exp_month').val(),
