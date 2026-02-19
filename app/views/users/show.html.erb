@@ -1,1 +1,36 @@
-<%= image_tag @user.profile.avatar.variant(resize_to_limit: [200, 200]) %>
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-4 text-center">
+              <% if @user.profile.avatar.attached? %>
+                <%= image_tag @user.profile.avatar.variant(resize_to_limit: [200, 200]), class: "rounded-circle img-thumbnail mb-3" %>
+              <% else %>
+                <div class="rounded-circle img-thumbnail mb-3 d-flex align-items-center justify-content-center bg-light mx-auto" style="width: 200px; height: 200px;">
+                  <span class="text-muted">No Image</span>
+                </div>
+              <% end %>
+            </div>
+            <div class="col-md-8">
+              <h2 class="fw-bold"><%= @user.profile.first_name %> <%= @user.profile.last_name %></h2>
+              <p class="text-muted mb-4"><%= @user.profile.job_title %></p>
+              
+              <h5 class="border-bottom pb-2">Contact Information</h5>
+              <% if current_user == @user %>
+                <p><strong>Email:</strong> <%= @user.profile.contact_email %></p>
+                <p><strong>Phone:</strong> <%= @user.profile.phone_number %></p>
+                <% else %>
+                <p>Only available to the user.</p>
+              <% end %>
+              
+              <h5 class="border-bottom pb-2 mt-4">About</h5>
+              <p><%= @user.profile.description %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

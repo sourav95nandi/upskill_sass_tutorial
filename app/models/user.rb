@@ -25,4 +25,10 @@ class User < ApplicationRecord
     errors.add(:base, e.message)
     false
   end
+
+  def to_param
+    # Returns "1-john-doe"
+    # The safe navigation operator (&.) prevents errors if profile is missing
+    "#{id}-#{profile&.first_name}-#{profile&.last_name}".parameterize
+  end
 end

@@ -18,6 +18,25 @@ class ProfilesController < ApplicationController
         end
     end
 
+    #GET to user/:user_id/profile/edit
+    def edit
+        @user = User.find(params[:user_id])
+        @profile = @user.profile
+    end
+
+    #PATCH to user/:user_id/profile
+    def update
+        @user = User.find(params[:user_id])
+        @profile = @user.profile
+        if @profile.update(profile_params)
+            flash[:success] = 'Profile updated successfully.'
+            redirect_to user_path(@user)
+        else
+            flash.now[:danger] = @profile.errors.full_messages.to_sentence
+            render :edit, status: :unprocessable_entity
+        end
+    end
+
     private
         def profile_params
             params.require(:profile).permit(:first_name, :last_name, :job_title, :phone_number, :contact_email, :description, :avatar)

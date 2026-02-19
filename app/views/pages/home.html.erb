@@ -5,6 +5,27 @@
 </div>
 <!-- <div class="container" style="margin-top: 30px;">-->
     <div class="row" style="margin-top: 30px;">
+      <% if user_signed_in? %>
+        <div class="col-md-6">
+          <div class="well">
+            <h2 class="text-center">Community</h2>
+            <p>Visit the community to meet other developers, entrepreneurs, and investors!</p>
+            <%= link_to "View Community", users_path, class: "btn btn-primary btn-lg w-100" %>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="well">
+            <h2 class="text-center">Your Profile</h2>
+            <% if current_user.profile %>
+              <%= link_to "View Profile", user_path(current_user), class: "btn btn-primary btn-lg w-100 mb-2" %>
+              <%= link_to "Edit Profile", edit_user_profile_path(user_id: current_user.id), class: "btn btn-secondary btn-lg w-100" %>
+            <% else %>
+              <p>Create your profile so that you can share your information with the community.</p>
+              <%= link_to "Create Your Profile", new_user_profile_path(user_id: current_user.id), class: "btn btn-primary btn-lg w-100" %>
+            <% end %>
+          </div>
+        </div>
+      <% else %>
         <div class="col-md-6">
             <div class="well">
                 <h2 class="text-center">Basic Membership</h2>
@@ -19,7 +40,7 @@
                 <%= link_to 'Upgrade Now with Pro Membership', new_user_registration_path(plan: @pro_plan.id), class: 'btn btn-success btn-lg w-100' %>
             </div>
         </div>
+      <% end %>
     </div>
-        <%= link_to "Create Your Profile", new_user_profile_path(user_id: current_user.id) , class: "btn btn-primary btn-lg w-100" if user_signed_in? %>
     
 <!-- </div> -->
