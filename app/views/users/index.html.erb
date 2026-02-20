@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h1 class="text-center mt-4 mb-4">Community</h1>
+    </div>
+  </div>
+  
+  <div class="row">
+    <% @users.each do |user| %>
+      <% unless user.profile == current_user.profile %>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="card h-100 shadow-sm text-center">
+            <div class="card-body">
+              <% if user.profile.avatar.attached? %>
+                <%= image_tag user.profile.avatar, class: "rounded-circle mb-3", style: "width: 120px; height: 120px; object-fit: cover;" %>
+              <% else %>
+                <div class="rounded-circle bg-secondary d-flex align-items-center justify-content-center mx-auto mb-3" style="width: 120px; height: 120px;">
+                  <span class="text-white h2 mb-0"><%= user.profile.first_name[0]&.upcase %><%= user.profile.last_name[0]&.upcase %></span>
+                </div>
+              <% end %>
+              <h5 class="card-title"><%= user.profile.first_name %> <%= user.profile.last_name %></h5>
+              <p class="card-text text-muted"><%= user.profile.job_title %></p>
+              <%= link_to 'View Profile', user_path(user), class: 'btn btn-primary' %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
